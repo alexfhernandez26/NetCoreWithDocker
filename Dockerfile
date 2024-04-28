@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-
+ENV DB_CONECTION_STRING="Server=10.0.0.7,1433;Database=NetWithDocker;User Id=FernandoHernandez;Password=8299123705;TrustServerCertificate=true;"
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["WebApiDocker.csproj", "."]
